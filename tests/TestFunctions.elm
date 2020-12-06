@@ -1,7 +1,7 @@
-module TestP1 exposing (findSumOfMultiplesOfOrBetweenTest)
+module TestFunctions exposing (findSumOfMultiplesOfOrBetweenTest)
 
 import Expect
-import P1 exposing (findSumOfMultiplesOfOrBetween)
+import Functions exposing (findSumOfMultiplesOfOrBetween)
 import Test exposing (Test, describe, test)
 
 

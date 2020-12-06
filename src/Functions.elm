@@ -1,4 +1,4 @@
-module P1 exposing (findSumOfMultiplesOfOrBetween)
+module Functions exposing (findSumOfMultiplesOfOrBetween)
 
 
 findSumOfMultiplesOfOrBetween : List Int -> ( Int, Int ) -> Int
