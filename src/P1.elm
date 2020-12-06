@@ -1,6 +1,6 @@
 module P1 exposing (solution)
 
-import Functions
+import Functions exposing (findSumOfMultiplesOfOrBetween)
 
 
 multipliers : List Int
@@ -20,4 +20,4 @@ tail =
 
 solution : Int
 solution =
-    Functions.findSumOfMultiplesOfOrBetween multipliers ( head, tail )
+    findSumOfMultiplesOfOrBetween multipliers ( head, tail )

@@ -3,7 +3,12 @@ module Functions exposing (findSumOfEvenValuedTermsOf, findSumOfMultiplesOfOrBet
 
 findSumOfEvenValuedTermsOf : List Int -> Int
 findSumOfEvenValuedTermsOf list =
-    0
+    list
+        |> List.filter
+            (\value ->
+                modBy 2 value == 0
+            )
+        |> List.sum
 
 
 addOneTermToReversedFibonacciSequence : Int -> List Int -> List Int
