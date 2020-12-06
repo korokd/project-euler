@@ -3,11 +3,13 @@ module Main exposing (main)
 import Html exposing (Html, a, div, li, text, ul)
 import Html.Attributes exposing (href, rel, target)
 import P1
+import P2
 
 
 mySolutions : List ( String, Int )
 mySolutions =
     [ ( "Problem 1", P1.solution )
+    , ( "Problem 2", P2.solution )
     ]
 
 
