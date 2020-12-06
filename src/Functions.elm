@@ -1,4 +1,9 @@
-module Functions exposing (findSumOfMultiplesOfOrBetween, makeFibonacciSequence)
+module Functions exposing (findSumOfEvenValuedTermsOf, findSumOfMultiplesOfOrBetween, makeFibonacciSequence)
+
+
+findSumOfEvenValuedTermsOf : List Int -> Int
+findSumOfEvenValuedTermsOf list =
+    0
 
 
 addOneTermToReversedFibonacciSequence : Int -> List Int -> List Int
