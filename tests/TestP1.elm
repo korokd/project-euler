@@ -10,6 +10,6 @@ findSumOfMultiplesOfOrBetweenTest =
     describe "If we list all the natural numbers below 10 that are multiples of 3 or 5"
         [ test "their sum should be 23" <|
             \_ ->
-                findSumOfMultiplesOfOrBetween [ 3, 5 ] ( 0, 10 )
+                findSumOfMultiplesOfOrBetween [ 3, 5 ] ( 1, 10 )
                     |> Expect.equal 23
         ]
