@@ -1,4 +1,9 @@
-module Functions exposing (findSumOfMultiplesOfOrBetween)
+module Functions exposing (findSumOfMultiplesOfOrBetween, makeFibonacciSequence)
+
+
+makeFibonacciSequence : ( Int, Int ) -> Int -> List Int
+makeFibonacciSequence ( first, second ) upperBound =
+    []
 
 
 findSumOfMultiplesOfOrBetween : List Int -> ( Int, Int ) -> Int
