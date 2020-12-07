@@ -7,12 +7,21 @@ import Test exposing (Test, describe, test)
 
 findSumOfEvenValuedTermsOfTest : Test
 findSumOfEvenValuedTermsOfTest =
-    describe "For a Fibonacci sequence starting with 1 and 2 and with an upper bound of 100"
-        [ test "the sum of the even-valued terms should be 34" <|
-            \_ ->
-                makeFibonacciSequence ( 1, 2 ) 100
-                    |> findSumOfEvenValuedTermsOf
-                    |> Expect.equal 44
+    describe "Given two initial terms X and Y and an upper bound Z, return the sum of the even-valued terms of the fibonacci sequence"
+        [ describe "For X = 1, Y = 2, and Z = 100"
+            [ test "the sum of the even-valued terms should be 34" <|
+                \_ ->
+                    makeFibonacciSequence ( 1, 2 ) 100
+                        |> findSumOfEvenValuedTermsOf
+                        |> Expect.equal 44
+            ]
+        , describe "For X = 1, Y = 2, and Z = 4000000"
+            [ test "the sum of the even-valued terms should be 4613732" <|
+                \_ ->
+                    makeFibonacciSequence ( 1, 2 ) 4000000
+                        |> findSumOfEvenValuedTermsOf
+                        |> Expect.equal 4613732
+            ]
         ]
 
 
@@ -28,9 +37,17 @@ makeFibonacciSequenceTest =
 
 findSumOfMultiplesOfOrBetweenTest : Test
 findSumOfMultiplesOfOrBetweenTest =
-    describe "If we list all the natural numbers below 10 that are multiples of 3 or 5"
-        [ test "their sum should be 23" <|
-            \_ ->
-                findSumOfMultiplesOfOrBetween [ 3, 5 ] ( 1, 9 )
-                    |> Expect.equal 23
+    describe "Find the sum of all the multiples of at least one of the multipliers provided, starting from X and up to Y"
+        [ describe "For multipliers = [ 3, 5 ], X = 1, and Y = 9"
+            [ test "the sum should be 23" <|
+                \_ ->
+                    findSumOfMultiplesOfOrBetween [ 3, 5 ] ( 1, 9 )
+                        |> Expect.equal 23
+            ]
+        , describe "For multipliers = [ 3, 5 ], X = 1, and Y = 999"
+            [ test "the sum should be 233168" <|
+                \_ ->
+                    findSumOfMultiplesOfOrBetween [ 3, 5 ] ( 1, 999 )
+                        |> Expect.equal 233168
+            ]
         ]
