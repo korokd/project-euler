@@ -5,6 +5,13 @@ import Functions exposing (findSumOfEvenValuedTermsOf, findSumOfMultiplesOfOrBet
 import Test exposing (Test, describe, test)
 
 
+
+{-
+   The last test case of each function with more than 1 case being tested shall test against the values
+   that can be seen at https://github.com/luckytoilet/projecteuler-solutions/blob/master/Solutions.md
+-}
+
+
 findSumOfEvenValuedTermsOfTest : Test
 findSumOfEvenValuedTermsOfTest =
     describe "Given two initial terms X and Y and an upper bound Z, return the sum of the even-valued terms of the fibonacci sequence"

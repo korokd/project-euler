@@ -6,28 +6,18 @@ import P1
 import P2
 
 
-mySolutions : List ( String, Int )
-mySolutions =
+solutions : List ( String, Int )
+solutions =
     [ ( "Problem 1", P1.solution )
     , ( "Problem 2", P2.solution )
     ]
 
 
-checkSolutionsView : Html msg
-checkSolutionsView =
-    a
-        [ href "https://github.com/luckytoilet/projecteuler-solutions/blob/master/Solutions.md"
-        , target "_blank"
-        , rel "noreferrer noopener"
-        ]
-        [ text "You can verify the answers here" ]
-
-
-mySolutionsView : Html msg
-mySolutionsView =
+solutionsView : Html msg
+solutionsView =
     ul
         []
-        (mySolutions
+        (solutions
             |> List.map
                 (\( problem, solution ) ->
                     li []
@@ -42,6 +32,5 @@ main : Html msg
 main =
     div
         []
-        [ checkSolutionsView
-        , mySolutionsView
+        [ solutionsView
         ]
